@@ -18,7 +18,7 @@ class TicTacToe:
                 return True
 
     def check_cross(self):
-        return (''.join([self.grid[0][0],self.grid[1][1],self.grid[2][2]]) == 'xxx' or (''.join([self.grid[0][2],self.grid[1][1],self.grid[2][0]]) == 'ooo'))
+        return (''.join([self.grid[0][0],self.grid[1][1],self.grid[2][2]]) == 'xxx' or ''.join([self.grid[0][0],self.grid[1][1],self.grid[2][2]]) == 'ooo' or (''.join([self.grid[0][2],self.grid[1][1],self.grid[2][0]]) == 'xxx' or (''.join([self.grid[0][2],self.grid[1][1],self.grid[2][0]]) == 'ooo')))
 
     def check_grid(self):
         if self.check_rows():
