@@ -48,7 +48,6 @@ class TicTacToe:
                           print('\nthe position is already used, try another one')
                           return 0  
                         else:
-                          print(self.grid[i][j])
                           self.grid[i][j] = option
                           return 1
         except:
