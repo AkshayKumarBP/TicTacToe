@@ -55,7 +55,7 @@ class TicTacToe:
     
     def start(self):
         count = 0
-        while count<=9:
+        while True:
             count+=1
             if count%2==1:
                 option = 'x'
@@ -65,20 +65,21 @@ class TicTacToe:
             flag = self.input(option)
 
             print()
-            if flag==0:
+            if flag != 1:
                 count-=1
-            else:
-                if self.check_grid():
-                    if option == 'x':
-                      print('Player 1[x] won :)')
-                      self.display()
-                      print('game over!')
-                      break
-                    else:
-                      print('Player 2[o] won :)')
-                      self.display()
-                      print('game over!')
-                      break
+            elif self.check_grid():
+                print('\ngame over! \n')
+                self.display()
+                print()
+                if option == 'x':
+                  print('Player 1[x] won :)')
+                  break
+                else:
+                  print('Player 2[o] won :)')
+                  break
+            elif count>8:
+                print("\nit's a DRAW!!! try again :)")
+                break
                 
             
 
