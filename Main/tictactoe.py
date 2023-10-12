@@ -82,13 +82,3 @@ class TicTacToe:
             elif count>8:
                 print("\nit's a DRAW!!! try again :)")
                 break
-                
-            
-
-
-
-        
-
-        
-        
-        
