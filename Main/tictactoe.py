@@ -37,20 +37,22 @@ class TicTacToe:
             pos = int(pos)
             current_pos = 0
             if pos<1 or pos>9:
-                print('the position is invalid, try valid position')
+                print('\nthe position is invalid, try valid position')
                 return 0
 
             for i in range(3):
                 for j in range(3):
                     current_pos+=1
                     if current_pos == pos:
-                        if self.grid[i][j] != 'x' or self.grid[i][j] != 'o':
-                            self.grid[i][j] = option
+                        if self.grid[i][j] == 'x' or self.grid[i][j] == 'o':
+                          print('\nthe position is already used, try another one')
+                          return 0  
                         else:
-                            print('the position is already used, try another one')
-                            return 1
+                          print(self.grid[i][j])
+                          self.grid[i][j] = option
+                          return 1
         except:
-            print('Enter valid position among the available positions, you entered',pos)
+            print('\nEnter valid position among the available positions, you entered',pos)
             return 0
     
     def start(self):
