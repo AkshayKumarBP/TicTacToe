@@ -4,8 +4,12 @@ class TicTacToe:
         self.grid = [['1','2','3'],['4','5','6'],['7','8','9']]
 
     def display(self):
-      for row in self.grid:
-        print('|'.join(row))
+      display = '- - - - -\n'
+
+      for i in self.grid:
+        display+=' | '.join(i)+'\n- - - - -\n'
+      
+      print(display)
     
     def check_rows(self):
       for row in self.grid:
