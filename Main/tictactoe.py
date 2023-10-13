@@ -4,10 +4,10 @@ class TicTacToe:
         self.grid = [['1','2','3'],['4','5','6'],['7','8','9']]
 
     def display(self):
-      display = '- - - - -\n'
+      display = ' - - - - - -\n'
 
       for i in self.grid:
-        display+=' | '.join(i)+'\n- - - - -\n'
+        display+='| '+' | '.join(i)+' |\n - - - - - -\n'
       
       print(display)
     
