@@ -61,6 +61,7 @@ class TicTacToe:
             return 0
     
     def start(self):
+        tprint('Tic Tac Toe',font='small')
         count = 0
         while True:
             count+=1
