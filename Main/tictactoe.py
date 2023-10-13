@@ -1,3 +1,5 @@
+from art import *
+
 class TicTacToe:
     
     def __init__(self):
